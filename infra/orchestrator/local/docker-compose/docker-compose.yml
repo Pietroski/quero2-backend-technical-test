@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  companies-db:
+    image: postgres:14.1
+    container_name: company_database
+    environment:
+      - POSTGRES_DB=companies_db
+      - POSTGRES_USER=company_manager
+      - POSTGRES_PASSWORD=company_manager
+    ports:
+      - "5430:5432"
+    volumes:
+      - ./.db/data/postgres/company:/var/lib/postgresql/data
+  employees-db:
+    image: postgres:14.1
+    container_name: employee_database
+    environment:
+      - POSTGRES_DB=employees_db
+      - POSTGRES_USER=employee_manager
+      - POSTGRES_PASSWORD=employee_manager
+    ports:
+      - "5431:5432"
+    volumes:
+      - ./.db/data/postgres/employees:/var/lib/postgresql/data

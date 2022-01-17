@@ -1,0 +1,24 @@
+version: "1"
+packages:
+  - name: "company"
+    path: "./internal/services/datasource/postgreSQL/company/"
+    queries: "./internal/services/datasource/postgreSQL/company/queries/"
+    schema: "./internal/services/datasource/postgreSQL/company/migrations/"
+    engine: "postgresql"
+    emit_prepared_queries: true
+    emit_interface: true
+    emit_exact_table_names: true
+    emit_empty_slices: true
+    emit_json_tags: true
+    json_tags_case_style: "camel"
+  - name: "employee"
+    path: "./internal/services/datasource/postgreSQL/employee/"
+    queries: "./internal/services/datasource/postgreSQL/employee/queries/"
+    schema: "./internal/services/datasource/postgreSQL/employee/migrations/"
+    engine: "postgresql"
+    emit_prepared_queries: true
+    emit_interface: true
+    emit_exact_table_names: true
+    emit_empty_slices: true
+    emit_json_tags: true
+    json_tags_case_style: "camel"
