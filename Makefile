@@ -15,3 +15,6 @@ mock-all:
 	@make \
 	mock-companies \
 	mock-employees;
+
+test-all:
+	go test ./...
